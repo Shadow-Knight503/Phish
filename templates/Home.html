@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+            background-color: rgb(248, 248, 248);
+        }
+
+        .Form {
+            margin-top: 10px;
+            border: 1px solid #d6d7d7;
+            border-radius: 1px;
+            background-color: white;
+            width: 350px;
+            height: 400px;
+        }
+
+        .Logo {
+            margin-left: 12%;
+            margin-top: 10%;
+            margin-bottom: 5%;
+        }
+
+        .Fld {
+            height: 35px;
+            width: 275px;
+            text-indent: 5px;
+            margin-left: 35px;
+            margin-bottom: 5px;
+            border: 1px solid #d6d7d7;
+            border-radius: 1px;
+            background-color: rgb(248, 248, 248);
+            color: black;
+        }
+
+        .Fld::placeholder {
+            color: rgb(131, 127, 127);
+        }
+
+        .Subt {
+            width: 275px;
+            height: 35px;
+            background-color: #229ce8;
+            color: white;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-left: 35px;
+            padding-left: 15px;
+            border-color: transparent;
+        }
+    </style>
+    <form method="post" class="Form container">
+        {% csrf_token %}
+        <img alt="Instagram" class="Logo container"
+                src="https://res.cloudinary.com/meme-topia/image/upload/v1671644377/image_2022-12-21_230934361_qnxrqy.png">
+{#        <label>#}
+{#            <input class="Fld browser-default" type="text" placeholder="Username">#}
+{#        </label>#}
+{#        <label>#}
+{#            <input class="Fld browser-default" type="password" placeholder="Password">#}
+{#        </label>#}
+        {{ form.UserName }}<br>
+        {{ form.PassWord }}
+        <button type="submit" class="Subt"><b>Log in</b></button>
+    </form>
+</body>
+</html>

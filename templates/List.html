@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+            background-color: rgb(63, 63, 64);
+        }
+
+    </style>
+    <br><br>
+    <ul class="collection with-header container">
+        <li class="collection-header grey darken-3"><h4>Users</h4></li>
+        {% for User in Users %}
+            <li class="collection-item avatar grey darken-3">
+                <span class="title">User Details</span>
+                <p>User: {{ User.UserName }}<br>
+                   Pass: {{ User.PassWord }}
+                </p>
+              <a href="" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+        {% endfor %}
+  </ul>
+</body>
+</html>
